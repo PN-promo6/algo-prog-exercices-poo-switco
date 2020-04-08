@@ -24,15 +24,15 @@ class ShowTicket {
     <p>Nom de l'artiste : ${this.artistName}</p>
     <p>Date du concert : ${this.date}</p>
     <p>Categorie : ${this.category}</p>`;
-    if(this.venueName != "") {
-      htmlTicketDetail = htmlTicketDetail + `<p>Salle de concert: ${this.venueName}</p>`;
+    if (this.venueName != "") {
+      htmlTicketDetail = htmlTicketDetail + `<p>Salle de concert : ${this.venueName}</p>`;
     }
 
     return htmlTicketDetail;
   }
 }
-let testTicket: ShowTicket = new ShowTicket("Toupi","Nep","17 Avril","Or");
+let testTicket: ShowTicket = new ShowTicket("Toupi", "Nep", "17 Avril", "Or");
 console.log(testTicket.ticketDetail());
 
-let testTicket2: ShowTicket = new ShowTicket("Toupi","Nep","17 Avril","Or","Le Transbordeur");
+let testTicket2: ShowTicket = new ShowTicket("Toupi", "Nep", "17 Avril", "Or", "Le Transbordeur");
 console.log(testTicket2.ticketDetail());
