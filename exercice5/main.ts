@@ -23,7 +23,7 @@ class ShowTicket {
     <p>Bonjour ${this.userName}</p>
     <p>Nom de l'artiste : ${this.artistName}</p>
     <p>Date du concert : ${this.date}</p>
-    <p>Categorie : ${this.category}</p>`;
+    <p>Catégorie : ${this.category}</p>`;
     if (this.venueName != "") {
       htmlTicketDetail = htmlTicketDetail + `<p>Salle de concert : ${this.venueName}</p>`;
     }
@@ -31,6 +31,7 @@ class ShowTicket {
     return htmlTicketDetail;
   }
 }
+
 let testTicket: ShowTicket = new ShowTicket("Toupi", "Nep", "17 Avril", "Or");
 console.log(testTicket.ticketDetail());
 
