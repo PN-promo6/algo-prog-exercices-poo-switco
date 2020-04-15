@@ -1,4 +1,4 @@
-
+(switco)
 class Playground {
     public static void main(String[ ] args) {
         ShowTicket ticket1 = new ShowTicket("Toupi", "Nep", "17 Avril", "Or", "Le Transbordeur");
@@ -17,19 +17,20 @@ class ShowTicket {
     public String venueName = "";
 
     
-    ShowTicket(String userName, String artistName, String date, String category, String venueName){
-        this.userName = userName;
-        this.artistName = artistName;
-        this.date = date;
-        this.category = category;
-        this.venueName = venueName;
-    }
-
     ShowTicket(String userName, String artistName, String date, String category){
         this.userName = userName;
         this.artistName = artistName;
         this.date = date;
         this.category = category;
+    } 
+
+    ShowTicket(String userName, String artistName, String date, String category, String venueName){
+        this.userName = userName;
+        this.artistName = artistName;
+        this.date = date;
+        this.category = category;
+        // On peut remplacer les 4 this du haut par this(userName, artistName, date, category);
+        this.venueName = venueName;
     }
 
     String ticketDetail() {
@@ -40,6 +41,7 @@ class ShowTicket {
         ", Catégorie : " + this.category;
          if(this.venueName != "") {
             htmlTicketDetail = htmlTicketDetail + ", Salle de concert : " + this.venueName;
+            // htmlTicketDetail += ", Salle de concert : " + this.venueName;
         }
         
         return htmlTicketDetail;
